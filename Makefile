@@ -1,10 +1,10 @@
 all: client server
 
-client: 
-	gcc -o cs494rcp_client client.c
+client: client.c header.h header.c
+	gcc client.c header.h header.c -o cs494rcp_client 
 
-server:
-	gcc -o cs494rcp_server server.c
+server: server.c header.h header.c
+	gcc server.c header.h header.c -o cs494rcp_server
 
 
 clean:
